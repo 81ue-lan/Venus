@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Venus-app",
+    "slug": "Venus-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
