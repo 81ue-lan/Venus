@@ -17,12 +17,15 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // import ForgotPassword from './app/screen/ForgotPassword/ForgotPassword';
 // import NewPassword from './app/screen/NewPassword/NewPassword';
 
+import NoteProvider from './app/contexts/NoteProvider';
+
 const Stack = createNativeStackNavigator();
 
 export default function App(){
   return(
     <SafeAreaView style={styles.root}>
      <NavigationContainer theme={MyTheme}>
+     <NoteProvider>
         <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} options={{headerShown:false}} /> 
          <Stack.Screen name="TabNavigator" component={TabNavigator} options={{headerShown:false}}/> 
@@ -38,6 +41,7 @@ export default function App(){
          <Stack.Screen name="sign-up" component={SignupScreen} options={{headerTitle:"",headerTintColor:"#ffffff"}}/>  */}
               
        </Stack.Navigator>
+       </NoteProvider>
       </NavigationContainer>
       </SafeAreaView> 
   );
@@ -56,3 +60,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 })
+
+
+
